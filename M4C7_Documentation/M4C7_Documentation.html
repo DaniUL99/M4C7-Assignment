@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4C7 - Documentación JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1 id="top">M4C7 - Documentación JavaScript</h1>
+</div>
+
+<div class="indice"><h2>Índice:</h2>
+    <ol>
+        <li><a href="#pregunta1">¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?</a></li>
+        <li><a href="#pregunta2">¿Cuáles son algunos tipos de datos JS?</a></li>
+        <li><a href="#pregunta3">¿Cuáles son las funciones de String en JS?</a></li>
+        <li><a href="#pregunta4">¿Qué es un condicional?</a></li>
+        <li><a href="#pregunta5">¿Qué es un operador ternario?</a></li>
+        <li><a href="#pregunta6">¿Cuál es la diferencia entre una declaración de función y una expresión de función?</a></li>
+        <li><a href="#pregunta7">¿Qué es la palabra clave "this" en JS?</a></li>
+    </ol>
+</div>
+
+<div class="preguntas">
+    <div id="pregunta1">
+        <h2>1. ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?</h2>
+            <p>JavaScript es un lenguaje de programación interpretado que se utiliza principalmente para crear páginas web y aplicaciones interactivas, y que permite a los desarrolladores crear interfaces de usuario dinámicas. JavaScript está diseñado para ejecutarse en navegadores web, lo que lo convierte en un lenguaje de scripting del lado del cliente. Esto significa que el código escrito en JavaScript puede ejecutarse directamente en el navegador, sin necesidad de software ni herramientas adicionales.</p>
+
+        <img src="images/js_caracteristicas.png" alt="">
+        
+        <ul>
+            <li><h4>Compilado vs. Interpretado</h4></li>
+                <p>Una de las principales diferencias entre JavaScript y otros lenguajes de programación es su ejecución. La mayoría de los lenguajes de programación se compilan, lo que significa que el código debe compilarse a un código legible por la máquina antes de ejecutarse. Por otro lado, JavaScript es un lenguaje interpretado, lo que significa que no necesita compilarse para ejecutarse. Esto facilita el trabajo con JavaScript, ya que los desarrolladores no tienen que esperar a que su código se compile para poder probarlo. </p>
+            <li><h4>Lado del cliente vs. lado del servidor</h4></li>
+                <p>Otra diferencia clave entre JavaScript y otros lenguajes de programación radica en su ejecución. Como se mencionó anteriormente, JavaScript está diseñado para ejecutarse en navegadores web y, por lo tanto, es un lenguaje de scripting del lado del cliente. Esto significa que el código escrito en JavaScript se ejecuta en el ordenador del usuario y no en el servidor. Por otro lado, otros lenguajes de programación suelen ejecutarse en el lado del servidor, lo que significa que deben enviarse del servidor al ordenador del usuario antes de poder ejecutarse. Con el tiempo se han creado formas de implementar JavaScript en el lado servidor; por ejemplo, usando Node.js.</p>
+            <li><h4>Orientado a objetos vs. procedimental</h4></li>
+                <p>JavaScript es un lenguaje de programación orientado a objetos. Esto significa que el código escrito en JavaScript se compone de objetos que contienen datos y funciones. Estos objetos pueden manipularse y utilizarse para crear programas complejos. Por otro lado, muchos otros lenguajes de programación son procedimentales, lo que significa que el código escrito en ellos consiste en una serie de instrucciones que deben seguirse en orden.</p>
+            <li><h4 id="dinamica">Tipificación dinámica vs. estática</h4></li>
+                <p>Otra diferencia clave entre JavaScript y otros lenguajes de programación es su gestión de los tipos de datos. JavaScript es un lenguaje dinámico, lo que significa que las variables no necesitan declararse con un tipo específico. Esto facilita el trabajo con datos, ya que los desarrolladores no tienen que especificar su tipo al declarar variables. Otros lenguajes de programación suelen tener tipos estáticos, lo que significa que las variables deben declararse con un tipo específico antes de poder usarse.</p>
+        </ul>
+        <p>En conclusión, JavaScript es un lenguaje potente y versátil que ofrece muchas ventajas sobre otros lenguajes de programación. Su naturaleza interpretada facilita su uso y su diseño orientado a objetos permite a los desarrolladores crear programas complejos de forma rápida y sencilla.</p>
+    </div>
+
+    <div id="pregunta2">
+        <h2>2. ¿Cuáles son algunos tipos de datos JS?</h2>
+            <p>JavaScript tiene muchos tipos de datos que podemos almacenar dentro de una variable.  Como ya mencionamos en el <a href="#dinamica">punto 1</a>, JavaScript es lo que se llama un lenguaje de programación dinámica, por lo que no es necesario declarar con qué tipo de datos vamos a trabajar.</p>
+            
+            <p>Estos son algunos de los tipos de datos más usados:</p>
+        <ul> 
+            <li><h4>Number (número)</h4></li>
+                <p>El tipo number representa tanto números enteros (integer) como con decimales (float).</p>
+                <code>
+                    var number1 = 123; <br>
+                    var number2 = 123.45;
+                </code>
+            <li><h4>String (cadena)</h4></li>
+                <p>Un string en JavaScript es una cadena de caracteres, es decir, una palabra o frase, y debe colocarse entre comillas ' o ".</p>
+                <code>
+                    var string1 = "Hola"; <br>
+                    var string2 = 'Hola pero con comillas simples';
+                </code>
+            <li><h4>Boolean</h4></li>
+                <p>El tipo boolean tiene sólo dos valores posibles: true y false.
+                Este tipo se utiliza generalmente para almacenar valores de sí/no: true significa "sí"/"verdadero", y false significa "no"/"falso".</p>
+                <code>
+                    var verdadero = true;  <br>
+                    var falso = false;
+                </code>
+            <li><h4>null (nulo)</h4></li>
+                <p>El valor nulo representa la ausencia intencional de cualquier valor de objeto, es un valor "nulo", "vacío", "nada". Podemos asignarlo poniendo simplemente null.</p>
+                <code>
+                    var edad = null;
+                </code>
+            <li><h4>undefined (indefinido)</h4></li>
+                <p>Si una variable es declarada, pero no asignada, entonces su valor será undefined.</p>
+                <p>Por ejemplo, si declaramos la variable "edad" pero no le asignamos ningún valor:</p>
+                <code>
+                    var edad; <br>
+                    console.log(edad);
+                </code>
+            <p>El resultado es:</p>
+                <code>
+                    undefined
+                </code>
+        </ul>
+
+        <h3>typeof</h3>
+        <p>El operador "typeof" nos permite comprobar con qué tipo de datos estamos operando. </p>
+        <p>Podemos usarlo directamente sobre el valor:</p>
+        <code>
+            typeof 12;
+        </code>
+        <p>Respuesta:</p>
+        <code>
+            'number'
+        </code>
+        <p>O sobre una variable, para comprobar que tipo de dato contiene:</p>
+        <code>
+            var edad = 12; <br>
+            typeof edad;
+        </code>
+        <p>Respuesta:</p>
+        <code>
+            'number'
+        </code>
+    </div>
+
+    <div id="pregunta3">
+        <h2>3. ¿Cuáles son las funciones de String en JS?</h2>
+            <p>JavaScript tiene una lista de funciones o métodos base con una gran variedad de funcionalidades que podemos aplicar a los strings (cadenas). Los strings son un tipo de dato inmutable, por lo que todos los métodos de string producen nuevos strings sin alterar el string original. Si queremos guardar el resultado de la función, tendremos que guardarlo en una nueva variable o asignarlo a la variable del string original.</p>
+            <p>Por ejemplo:</p>
+            <p>Aquí creamos una nueva variable:</p>
+                <code>
+                    var string1 = "Hola"; <br>
+                    var string2 = string1.funcion();
+                </code>
+            <p>Y aquí se lo asignamos a la variable del string original:</p>
+                <code>
+                    var string1 = "Hola"; <br>
+                    var string1 = string1.funcion();
+                </code>
+            <p>Estas son algunas de las funciones de string más utilizadas:</p>
+            <ul>
+                <li><h4>.length</h4></li>
+                    <p>Nos devuelve el largo (length) del string, es decir, el número de caracteres que tiene (no index).</p>
+                        <code>
+                            var string = "Hola mundo"; <br>
+                            var string_nuevo = string.length; <br>
+                            <br>
+                            console.log(string_nuevo)
+                        </code>
+                    <p>Resultado:</p>
+                        <code>
+                            10
+                        </code>
+                <li><h4>.charAT()</h4></li>
+                    <p>Nos devuelve el carácter que está en el número de index que introducimos entre los paréntesis.</p>
+                        <code>
+                            var string = "Hola mundo"; <br>
+                            var string_nuevo = string.charAt(2); <br>
+                            <br>
+                            console.log(string_nuevo)
+                        </code>
+                    <p>Resultado:</p>
+                        <code>
+                            l
+                        </code>
+                <li><h4>.concat()</h4></li>
+                    <p>Le añade el contenido que hay entre los paréntesis al string. Funciona parecido a "+".</p>
+                        <code>
+                            var string = "Hola mundo"; <br>
+                            var string_nuevo = string.concat("!"); <br>
+                            <br>
+                            console.log(string_nuevo)
+                        </code>
+                    <p>Resultado:</p>
+                        <code>
+                            Hola mundo!
+                        </code>
+                <li><h4>.repeat()</h4></li>
+                    <p>Repite el contenido del string tantas veces le digas entre los paréntesis.</p>
+                        <code>
+                            var string = "Hola mundo"; <br>
+                            var string_nuevo = string.repeat(2); <br>
+                            <br>
+                            console.log(string_nuevo)
+                        </code>
+                    <p>Resultado:</p>
+                        <code>
+                            Hola mundoHola mundo 
+                        </code>
+                <li><h4>.replace()</h4></li>
+                    <p>Reemplaza el contenido que está antes de la coma entre los paréntesis, por el que está después de la coma.</p>
+                        <code>
+                            var string = "Hola mundo"; <br>
+                            var string_nuevo = string.replace("Hola", "Adiós"); <br>
+                            <br>
+                            console.log(string_nuevo)
+                        </code>
+                    <p>Resultado:</p>
+                        <code>
+                            Adiós mundo
+                        </code>
+                <li><h4>.toUpperCase() / .toLowerCase()</h4></li>
+                    <p>Sirven para poner el texto del string en mayúscula y minúscula respectivamente.</p>
+                    <p><b>.toUpperCase():</b></p>
+                        <code>
+                            var string = "Hola mundo"; <br>
+                            var string_nuevo = string.toUpperCase(); <br>
+                            <br>
+                            console.log(string_nuevo)
+                        </code>
+                    <p>Resultado:</p>
+                        <code>
+                            HOLA MUNDO 
+                        </code>
+                    <p><b>.toLowerCase():</b></p>
+                        <code>
+                            var string = "Hola mundo"; <br>
+                            var string_nuevo = string.toLowerCase(); <br>
+                            <br>
+                            console.log(string_nuevo)
+                        </code>
+                    <p>Resultado:</p>
+                        <code>
+                            hola mundo
+                        </code>
+            </ul>
+    </div>
+
+    <div id="pregunta4">
+        <h2>4. ¿Qué es un condicional?</h2>
+            <p>Es un tipo de código que nos da una respuesta dependiendo de si una condición es verdadera o falsa.</p>
+            <p>Para crear un condicional simple, primero pondremos "if", después entre paréntesis pondremos la condición que queremos que se cumpla, y después entre {} e indentado, la respuesta que queremos que tenga en el caso de que se cumpla la condición.</p>
+        <h4>Sintaxis:</h4>  
+            <code>
+                if (condición) {
+                    <span class="indent">respuesta</span>
+                }                
+            </code>
+        <h4>Por ejemplo:</h4>
+            <p>Queremos que si el color es "rojo" nos devuelva el texto "El color es rojo", y de no ser así, que no nos devuelva nada.</p>
+            <code>
+                var color = "rojo"; <br>
+                <br>
+                if (color == "rojo") { 
+                    <span class="indent">console.log("El color es rojo");</span>
+                } 
+            </code>
+            <p>Resultado:</p>
+            <code>
+                El color es rojo
+            </code>
+            <p>Para crear la condición hemos usado "=="; esto es un operador de comparación, y aquí tenemos algunos que podemos usar con condicionales:</p>
+            <ul>
+                <li>== : los elementos tienen el mismo valor</li>
+                <li>=== : los elementos tienen el mismo valor y tipo de dato</li>
+                <li>!= : los elementos no tienen el mismo valor</li>
+                <li>!== : los elementos no tienen el mismo valor o tipo de dato</li>
+                <li>> : el primer elemento es mayor que el segundo</li>
+                <li>< : el primer elemento es menor que el segundo </li>
+                <li>>= : el primer elemento es igual o mayor que el segundo</li>
+                <li><= : el primer elemento es igual o menor que el segundo</li>
+                <li>&& : y / para añadir más de una condición</li>
+            </ul>
+            <p>Aunque podamos crear un condicional funcional solo con "if", si queremos crear un condicional más dinámico que nos ofrezca y tenga en cuenta más opciones, podemos combinar "if" con "else if" y/o "else".</p>
+            <ul>
+                <li><b>if</b> : sirve para introducir una condición.</li>
+                <li><b>else if</b> : sirve para introducir una nueva condición (y respuesta) en el caso de que no se cumpliera la anterior.</li>
+                <li><b>else</b> : sirve para ofrecer una respuesta alternativa en el caso de no cumplir ninguna de las condiciones anteriores.</li>
+            </ul>
+        <h4>Sintaxis:</h4>  
+            <code>
+                if (condición) { 
+                    <span class="indent">respuesta</span>
+                } else if (condición) { 
+                    <span class="indent">respuesta</span>
+                } else { 
+                    <span class="indent">respuesta</span> 
+                }                
+            </code>
+        <h4>Por ejemplo:</h4>
+            <p>Queremos que responda de formas diferentes dependiendo de si el número es más grande, más pequeño o igual a 10.</p>
+            <code>
+                var numero = 6 <br>
+                <br>
+                if (numero > 10) { 
+                    <span class="indent">console.log("es mayor")</span>
+                } else if (numero < 10) { 
+                    <span class="indent">console.log("es menor")</span>
+                } else { 
+                    <span class="indent">console.log("es igual")</span>
+                } 
+            </code>
+            <p>Resultado:</p>
+            <code>
+                es menor
+            </code>
+    </div>
+
+    <div id="pregunta5">
+        <h2>5. ¿Qué es un operador ternario?</h2>
+            <p>El operador ternario es una alternativa al condicional if/else de una forma mucho más compacta y breve, que en muchos casos resulta más legible. Sin embargo, hay que tener cuidado, porque su sobreutilización puede ser contraproducente y producir un código más difícil de leer.</p>
+            <p>Para utilizar un operador ternario, primero pondremos la condición que se tendrá que cumplir, después un "?", y después el valor que devolverá si se cumple la condición y el que devolverá si no se cumple separados por ":".</p>
+        <h4>Sintaxis:</h4>
+                <code>
+                condición ? valor_si_verdadero : valor_si_falso;
+                </code>
+            <p>Para ver como funciona vamos a crear un condicional if/else convencional (<a href="#pregunta4">mira el punto 4</a>) y después vamos a crear el mismo condicional pero usando un operador ternario.</p>
+        <h4>Por ejemplo:</h4>
+            <p>Vamos a crear un condicional en el que si la edad es igual o superior a 18 nos devuelva que "puede conducir", y que si no nos devuelva que "no puede conducir":</p>
+                <code>
+                var edad = 20 <br>
+                <br>
+                if (edad >= 18) { 
+                    <span class="indent">conducir = 'puede conducir';</span>
+                } else { 
+                    <span class="indent">conducir = 'no puede conducir';</span>
+                } <br>
+                <br>
+                console.log(conducir);
+                </code>
+            <p>Ahora, vamos a reescribirlo utilizando un operador ternario:</p>
+                <code>
+                var edad = 20 <br>
+                <br>
+                conducir = edad >= 18 ? 'puede conducir' : 'no puede conducir'; <br>
+                <br>
+                console.log(conducir); 
+                </code>
+            <p>Como puedes ver, los operadores ternarios pueden ser útiles, especialmente para acortar y aligerar el código, pero deberían utilizarse solo para condicionales simples, si no puede generar un código demasiado complicado y poco legible.</p>
+    </div>
+
+    <div id="pregunta6">
+        <h2>6. ¿Cuál es la diferencia entre una declaración de función y una expresión de función?</h2>
+                <p>Una función es un fragmento de código que puede ser invocado para realizar tareas o devolver un resultado. Esta función puede, o no, recibir parámetros/valores y también puede, o no, devolver un resultado.</p>
+                <p>A la hora de crear funciones, estas pueden ser declaraciones o expresiones.</p>
+            <h3>Declaración de función</h3>
+                <p>Para declarar una función, se usa la palabra clave function y se le asigna un nombre.</p>
+                <h4 id="suma1">Por ejemplo:</h4>
+                    <p>Vamos a crear una función llamada "suma1" que recibirá dos números y nos devolverá la suma de estos.</p>
+                        <code>
+                            function suma1(num1, num2) { 
+                                <span class="indent">console.log(num1 + num2)</span>
+                            }                
+                        </code>
+                    <p>Si queremos usar la misma función más tarde, podremos llamarlo usando su nombre (suma1).</p>
+                        <code>
+                            var operacion = suma1(20, 50)
+                        </code>
+                    <p>Puedes usar una función declarada antes de la línea donde se inicializó. Por ejemplo:</p>
+                        <code>
+                            var operacion = suma1(20, 50) <br>
+                            <br>
+                            function suma1(num1, num2) { 
+                                <span class="indent">console.log(num1 + num2)</span>
+                            }
+                        </code>
+            <h3>Expresión de función</h3>
+                    <p>Para crear una expresión de función, primero se crea una variable y después se le asigna una función anónima. Al final de la función tendremos que poner  ";". </p>
+                <h4>Por ejemplo:</h4>
+                    <p>Queremos una función que cumpla la misma tarea que la que hemos declarado antes (<a href="#suma1">suma1</a>), pero esta vez queremos que esté dentro de una variable llamada "suma2".</p>
+                        <code>
+                            var suma2 = function(num1, num2) { 
+                                <span class="indent">console.log(num1 + num2)</span>
+                            };                
+                        </code>
+                    <p>Si intentamos declarar la misma función anónima, pero sin asignarla a una variable, esto nos devolverá error. Por ejemplo, esto:</p>
+                        <code>
+                            function(num1, num2) { 
+                                <span class="indent">console.log(num1 + num2)</span>
+                            }                
+                        </code>
+                    <p>Nos devolverá algo así:</p>
+                        <code class="error">
+                            SyntaxError: Function statements require a function name
+                        </code>
+                    <p>Si queremos usar la misma función más tarde, tendremos que usar el nombre de la variable al cual se lo hemos asignado (suma2), porque la función en sí no tiene nombre.</p>
+                        <code>
+                            var operacion = suma2(20, 50)   
+                        </code>
+                    <p>A diferencia de las funciones declaradas, las funciones expresadas solo podrán ser usadas después de haberlas asignado. Por ejemplo, si intentamos hacer esto:</p>
+                        <code>
+                            var operacion = suma2(20, 50) <br>
+                            <br>
+                            var suma2 = function(num1, num2) { 
+                                <span class="indent">console.log(num1 + num2)</span>
+                            };
+                        </code>
+                    <p>Nos devolverá algo así:</p>
+                        <code class="error">
+                            Uncaught TypeError TypeError: suma2 is not a function
+                        </code>
+            <h3>Conclusión</h3>
+                <p>Aunque a primera vista parezcan similares, hay que tener en cuenta las particularidades de las funciones declaradas y expresadas, puesto que las diferencias en su comportamiento pueden causarnos problemas y errores en el código.</p>
+    </div>
+
+    <div id="pregunta7">
+        <h2>7. ¿Qué es la palabra clave "this" en JS?</h2>
+            <p>Es una palabra clave cuyo valor y comportamiento varían según donde se utilice. Se suele utilizar en funciones dentro de objetos, y sirve para representar o llamar al objeto que dicha función está modificando. "This" significa "esto" en español y, como su nombre indica, hace referencia al objeto en cuestión. Esta palabra clave es útil para acceder a propiedades y métodos de objetos, mejorando la flexibilidad y reutilización del código. </p>
+            <p>Un uso común de "this" es para referirse al objeto en el que se está trabajando, utilizando la palabra clave "this" en vez del nombre del objeto. </p>
+        <h4>Por ejemplo:</h4>
+            <p>Vamos a crear un objeto llamado "usuario" en el que guardaremos las propiedades "nombre" y "apellido" con sus valores, y después una función llamada "nombreCompleto" la cual nos devolverá el "nombre" y el "apellido" separados por un espacio.</p>
+                <code>
+                    var usuario = { 
+                        <span class="indent">nombre: "Daniel", </span>
+                        <span class="indent">apellido: "Unamuno",</span>
+                        <span class="indent">nombreCompleto : function() { </span>
+                            <span class="indent2">return usuario.nombre + " " + usuario.apellido;</span>
+                        <span class="indent">},</span>
+                    }; <br>
+                    <br>
+                    console.log(usuario.nombreCompleto());                    
+                </code>
+            <p>El resultado será:</p>
+                <code>
+                    Daniel Unamuno
+                </code>
+            <p>Ahora escribiremos el mismo código pero usando "this":</p>
+                <code>
+                    var usuario = { 
+                        <span class="indent">nombre: "Daniel", </span>
+                        <span class="indent">apellido: "Unamuno",</span>
+                        <span class="indent">nombreCompleto : function() { </span>
+                            <span class="indent2">return this.nombre + " " + this.apellido;</span>
+                        <span class="indent">},</span>
+                    }; <br>
+                    <br>
+                    console.log(usuario.nombreCompleto());                    
+                </code>
+            <p>Como podrás ver, "this" ha reemplazado a "usuario" el nombre del objeto en el que está y al que hacer referencia para acceder a las propiedades "nombre" y "apellido".</p> 
+    </div>
+    <a href="#top" style="text-align: center;">Volver arriba</a>
+</div>
+</body>
+</html>
